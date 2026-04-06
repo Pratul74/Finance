@@ -3,7 +3,7 @@ from .models import Record, Category
 
 class RecordSerializer(serializers.ModelSerializer):
 
-    user=serializers.HiddenField(defualt=serializers.CurrentUserDefault())
+    user=serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     def validate_amount(self, value):
         if value <= 0:
